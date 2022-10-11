@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+/*Default font size is 20. Default font color is #EDF6F9 (white-ish).*/
+*{
+  font-size: 20px;
+ }
+
+body,
+html {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #EDF6F9;
+  /* font-size: 20px; */
+  background-color: #83C5BE;
+
+  background-image: url("../images/coffee-background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title_font {
+  font-family: 'Lexend', sans-serif;
+}
+
+/*--Headers--*/
+/*Main Header*/
+header {
+  background-color: #83C5BE;
+  padding: 0.5%;
+}
+
+footer {
+  background-color: #006D77;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  font-size: small;
+}
+
+.header_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.header_home {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 800px;
+}
+
+.header_text {
+  font-size: 40px;
+}
+
+/*Other Headers*/
+h1 {
+  font-size: 150px;
+}
+
+h2 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 50px;
+}
+
+/*--Input--*/
+/*Header Buttons*/
+.nav_buttons {
+  display: flex;
+  justify-content: right;
+  gap: 30px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  min-width: 150px;
+  height: 50px;
+}
+
+.button:hover,
+.dropdown-content a:hover {
+  background-color: #E29578;
+}
+
+/*Other Buttons*/
+.big_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E29578;
+  border-radius: 15px;
+  font-weight: bold;
+  width: 150px;
+  height: 150px;
+}
+
+.big_button:hover {
+  background-color: #FFDDD2;
+}
+
+.square_button {
+  width: 150%;
+  height: 100%;
+  margin-top: 1;
+  font-size: larger;
+}
+
+/*Dropdown*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #83C5BE;
+  font-size: 18px;
+  width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.dropdown:hover .button {
+  background-color: #E29578;
+}
+
+/*--Content--*/
+.middle_section,
+.list_section,
+.list_info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+  width: 55%;
+  padding: 1%;
+}
+
+.list_section {
+  justify-content: center;
+  height: 600px;
+  padding: 0%;
+}
+
+.list_info {
+  /*This is a flexbox*/
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3%;
+  width: 100%;
+  height: 10%;
+  padding: 0px;
+
+  background-color: #83C5BE;
+}
+
+.checklist_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: auto;
+  width: 100%;
+  height: 70%;
+
+  background-color: linen;
+}
+
+table {
+  border-collapse: collapse;
+  color: black;
+  width: 100%;
+
+  table-layout: fixed;
+}
+
+td {
+  word-wrap: break-word
+}
+
+td,
+th {
+  border: 1px solid #504d4d;
+  text-align: center;
+}
+
+.task_column,
+.click_column {
+  text-align: center;
+}
+
+.click_column {
+  word-wrap: break-word;
+  width: 10%;
+}
+
+tr:first-child {
+  background-color: #E29578;
+  color: #EDF6F9;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.input_section_todo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+
+  background-color: #83C5BE;
+}
+
+.input_section_shopping {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  width: 100%;
+
+  background-color: #83C5BE;
+}
+
+.form_section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  align-items: left;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+}
+
+.input_section_shopping .form_section div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  align-items: left;
+  justify-content: center;
+}
+
+.num_input_container {
+  width: 70% !important;
+}
+
+.text_input {
+  display: flex;
+  gap: 1%;
+}
+
+input[type=text] {
+  padding: 0px 0px;
+  margin: 0px 0;
+  box-sizing: border-box;
+  font-size: 30px;
+  height: 100%;
+  width: 80%;
+}
+
+input[type=number] {
+  padding: 0px 0px;
+  margin: 0px 0;
+  box-sizing: border-box;
+  font-size: 30px;
+  height: 100%;
+  width: 60%;
+}
+
+/*--Text--*/
+/*Link*/
+a:link {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+.a_color_link {
+  color: #E29578;
+}
+
+.a_color_link:visited {
+  color: #FFDDD2;
+}
+
+/*No space between items*/
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.left_align {
+  text-align: left;
+  align-items: left;
+}
+
+.text_container {
+  text-align: left;
+  align-items: left;
+  border-radius: 25px;
+  padding: 3%;
+  background-color: rgb(0, 108, 117, 0.5);
+}
+
+h3.center_this{
+  text-align: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .middle_section {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav_buttons {
+    font-size: larger;
+  }
+
+  body,
+  html {
+    font-size: larger;
+    height: 100%;
+  }
+
+  .header_text {
+    font-size: 300%;
+  }
+
+  .dropdown-content {
+    font-size: larger;
+  }
+
+  .list_section {
+    width: 100%;
+  }
+
+}
+
+video::-webkit-media-controls-volume-slider {
+  display: none;
+}
+
+video::-webkit-media-controls-mute-button {
+  display: none;
+}
