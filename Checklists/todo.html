@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Todo</title>
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <script src="./javascript/main.js"></script>
+</head>
+
+<body onload="displayHeader(), displayTodoCounts()">
+<!-- <body onload="displayHeader(), displayFooter(), displayTodoCounts()"></body> -->
+    <!--Display Header-->
+    <div id = "header_place"></div>
+
+    <div class="middle_section">
+        <h2>To-Do List</h2>
+        <br>
+    </div>
+    <div class="list_section">
+        <div class="list_info">
+            <div>
+                <!--Total number of tasks-->
+                <span>Total # of Tasks: </span>
+                <span id="num_of_tasks"></span>
+            </div>
+            <div>
+                <!--Number of completed tasks-->
+                <span>Completed Tasks: </span>
+                <span id = "num_of_c_tasks"></span>   
+            </div>
+            <!--Number of uncompleted tasks-->
+            <div>
+                <span>Uncompleted Tasks: </span>
+                <span id = "num_of_u_tasks"></span>   
+            </div>
+        </div>
+        <!--List Display-->
+        <div class="checklist_container">
+            <table id=todo_table>
+                <tr>
+                    <th class = "click_column" style = "width: 15%;">Completed</th>
+                    <th class = "task_column">Task</th>
+                    <th class = "click_column" style = "width: 15%;">Remove</th>
+                </tr>
+            </table>
+        </div>
+        <!--User input-->
+        <div class="input_section_todo">
+            <div class = "form_section">
+                <label for="task">New Task:</label>
+                <form class = "text_input">
+                    <!--User input-->
+                    <input type="text" name=task id=task required minlength="1" maxlength="64">
+                    <!--User submits items that gets added to the list-->
+                    <span><input type="button" id = "addBtn" class = "square_button" value="+" onclick="addRowToDo()"/></span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- <div id  = "footer_place"></div> -->
+</body>
+
+</html>
